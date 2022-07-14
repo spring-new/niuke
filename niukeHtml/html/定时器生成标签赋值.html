@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title></title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+
+        <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById('btn1').onclick = function () {
+                    for (let ac = 0; ac < 10; ac++) {
+                        var alink = document.createElement('a');
+                        alink.href = 'http://www.baidu.com';
+                        alink.target = '_blank';
+                        alink.title = '百度一下，你就知道！';
+                        alink.innerText = '百度';
+                        document.getElementById('div1').appendChild(alink);
+                        var txtInput = document.createElement('input');
+                        txtInput.id=ac
+                        txtInput.type = 'text';
+                        txtInput.value = "12"
+                        document.getElementById('div1').appendChild(txtInput);
+                    }
+                };
+            };
+
+
+            setInterval(function () {
+                //中加载一次
+                if (document.getElementById("1")=== null||document.getElementById("1")==="") {
+                    document.getElementById("btn1").click();
+                }
+
+                // var e = document.createEvent("MouseEvents");
+                // e.initEvent("click", true, true);
+                // document.getElementById("btn1").dispatchEvent(e);
+
+            }, 0);
+
+        </script>
+
+        <style type="text/css">
+            #div1 {
+                width: 300px;
+                height: 300px;
+                border: 1px solid red;
+            }
+        </style>
+        <input type="button" id="btn1" value="动态创建一个元素"/>
+        <div id="div1"></div>
+    </body>
+</html>
+

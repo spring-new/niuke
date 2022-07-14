@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8>
+    </head>
+    <body>
+        <input id="input" type="text" onchange="ispan()"/>
+        <span id="span"></span>
+
+        <script type="text/javascript">
+            // 补全代码
+            //1:
+            document.getElementById('input').onchange = function () {
+                document.getElementById("span").innerHTML = this.value
+
+            }
+
+            //2:
+            function ispan() {
+                span.innerText = input.value;
+            }
+
+        </script>
+    </body>
+</html>

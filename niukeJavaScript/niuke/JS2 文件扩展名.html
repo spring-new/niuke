@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <script>
+            const _getExFilename = (filename) => {
+                // 补全代码
+                if (filename.length > 0) {
+                    //https://blog.csdn.net/xuehangongzi/article/details/82928407
+                    const index = filename.lastIndexOf(".")
+                    if (index > 0) {
+                        return filename.substring(index)
+                    }else {
+                        return filename
+                    }
+
+                }
+            }
+        </script>
+    </body>
+</html>
